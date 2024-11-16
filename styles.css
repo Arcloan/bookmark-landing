@@ -8,3 +8,10 @@
     src: url("./Rubik/Rubik-VariableFont_wght.ttf");
   }
 }
+
+@layer utilities {
+  .fullWidth {
+    box-shadow: 0 0 0 100vmax #5368df;
+    clip-path: inset(0 -100vmax);
+  }
+}

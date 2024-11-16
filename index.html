@@ -8,29 +8,37 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body class="font-Rubik grid">
-    <header class="hidden">
-      <nav></nav>
-    </header>
-    <header class="w-[90%] justify-self-center mt-8">
-      <div class="flex justify-between align-middle">
-        <img src="images/logo-bookmark.svg" alt="" />
-        <img src="images/icon-hamburger.svg" alt="" />
+    <header class="w-[90%] justify-self-center mt-8 lg:w-[85%]">
+      <div class="flex justify-between items-center lg:pr-14">
+        <img src="images/logo-bookmark.svg" alt="" class="w-auto h-max" />
+        <img src="images/icon-hamburger.svg" alt="" class="lg:hidden" />
+        <div class="max-lg:hidden flex gap-6 text-grayshBlue items-center">
+          <a href="#">FEATURES</a>
+          <a href="#">PRICING</a>
+          <a href="#">CONTACT</a>
+          <button class="py-1.5 px-6 bg-softRed text-white rounded-md">
+            LOGIN
+          </button>
+        </div>
       </div>
     </header>
     <main class="grid place-items-center">
-      <div class="wrapper grid place-items-center max-w-[90%]">
-        <section aria-label="Description" class="mt-16 grid gap-4">
-          <img src="images/illustration-hero.svg" alt="" />
-          <div class="grid gap-4">
-            <h2 class="font-bold text-2xl text-center">
+      <div class="wrapper grid place-items-center max-w-[90%] lg:max-w-[85%]">
+        <section
+          aria-label="Description"
+          class="mt-16 grid gap-4 lg:grid-cols-2 lg:gap-8"
+        >
+          <img src="images/illustration-hero.svg" alt="" class="lg:order-2" />
+          <div class="grid gap-4 lg:h-max lg:gap-6 lg:self-center">
+            <h2 class="font-bold text-2xl text-center lg:text-left lg:text-4xl">
               A Simple Bookmark Manager
             </h2>
-            <p class="text-grayshBlue text-center">
+            <p class="text-grayshBlue text-center lg:text-left">
               A clean and simple interface to organize your favorite websites.
               Open a new browser tab and see your sites load instantly. Try it
               for free.
             </p>
-            <div class="grid grid-cols-2 gap-4">
+            <div class="grid grid-cols-2 gap-4 lg:w-max">
               <button class="p-2 rounded-md text-white bg-softBlue shadow-md">
                 Get it on Chrome
               </button>
@@ -43,13 +51,15 @@
         <section aria-label="Features" class="grid gap-4 mt-24">
           <div class="grid gap-4">
             <h2 class="text-center text-xl">Features</h2>
-            <p class="text-grayshBlue text-center">
+            <p
+              class="text-grayshBlue text-center lg:max-w-[40ch] lg:justify-self-center"
+            >
               Our aim is to make it quick and easy for you to access your
               favorite websites. Your bookmarks sync between your devices so you
               can access them on the go.
             </p>
             <div
-              class="border-t-2 border-b-2 flex flex-col justify-center divide-y-2"
+              class="border-t-2 border-b-2 flex flex-col justify-center divide-y-2 lg:divide-none lg:border-t-0 lg:flex-row lg:gap-16 lg:max-w-max lg:justify-self-center"
             >
               <h3
                 class="pt-4 text-center pb-4 relative after:w-[50%] after:h-1.5 after:absolute after:bottom-0 after:left-[50%] after:-translate-x-[50%] after:bg-softRed after:hidden"
@@ -69,50 +79,59 @@
             </div>
           </div>
           <div class="mt-16">
-            <div class="firstFeature grid gap-8">
+            <div class="firstFeature grid gap-8 lg:grid-cols-2 lg:gap-16">
               <img src="images/illustration-features-tab-1.svg" alt="" />
-              <div class="grid gap-4">
-                <h3 class="text-center font-bold text-xl">
+              <div class="grid gap-4 lg:h-max lg:gap-6 lg:self-center">
+                <h3 class="text-center font-bold text-xl lg:text-left">
                   Bookmark in one click
                 </h3>
-                <p class="text-center text-grayshBlue">
+                <p class="text-center text-grayshBlue lg:text-left">
                   Organize your bookmarks however you like. Our simple
                   drag-and-drop interface gives you complete control over how
                   you manage your favorite sites.
                 </p>
-              </div>
-            </div>
-            <div class="secondFeature hidden grid gap-8">
-              <img src="images/illustration-features-tab-2.svg" alt="" />
-              <div class="grid gap-4">
-                <h3 class="text-center font-bold text-xl">
-                  Intelligent search
-                </h3>
-                <p class="text-center text-grayshBlue">
-                  Our powerful search feature will help you find saved sites in
-                  no time at all. No need to trawl through all of your
-                  bookmarks.
-                </p>
                 <button
-                  class="p-2 rounded-md text-white bg-softBlue shadow-md w-max justify-self-center"
+                  class="p-2 rounded-md text-white bg-softBlue shadow-md w-max justify-self-center lg:justify-self-start"
                 >
                   More info
                 </button>
               </div>
             </div>
-            <div class="thirdFeature hidden grid gap-8">
+            <div
+              class="secondFeature hidden grid gap-8 lg:grid-cols-2 lg:gap-16"
+            >
+              <img src="images/illustration-features-tab-2.svg" alt="" />
+              <div class="grid gap-4 lg:h-max lg:gap-6 lg:self-center">
+                <h3 class="text-center font-bold text-xl lg:text-left">
+                  Intelligent search
+                </h3>
+                <p class="text-center text-grayshBlue lg:text-left">
+                  Our powerful search feature will help you find saved sites in
+                  no time at all. No need to trawl through all of your
+                  bookmarks.
+                </p>
+                <button
+                  class="p-2 rounded-md text-white bg-softBlue shadow-md w-max justify-self-center lg:justify-self-start"
+                >
+                  More info
+                </button>
+              </div>
+            </div>
+            <div
+              class="thirdFeature hidden grid gap-8 lg:grid-cols-2 lg:gap-16"
+            >
               <img src="images/illustration-features-tab-3.svg" alt="" />
-              <div class="grid gap-4">
-                <h3 class="text-center font-bold text-xl">
+              <div class="grid gap-4 lg:h-max lg:gap-6 lg:self-center">
+                <h3 class="text-center font-bold text-xl lg:text-left">
                   Share your bookmarks
                 </h3>
-                <p class="text-center text-grayshBlue">
+                <p class="text-center text-grayshBlue lg:text-left">
                   Easily share your bookmarks and collections with others.
                   Create a shareable link that you can send at the click of a
                   button.
                 </p>
                 <button
-                  class="p-2 rounded-md text-white bg-softBlue shadow-md w-max justify-self-center"
+                  class="p-2 rounded-md text-white bg-softBlue shadow-md w-max justify-self-center lg:justify-self-start"
                 >
                   More info
                 </button>
@@ -125,12 +144,16 @@
             <h3 class="text-xl font-bold text-center">
               Download the extension
             </h3>
-            <p class="text-grayshBlue text-center">
+            <p
+              class="text-grayshBlue text-center lg:max-w-[50ch] justify-self-center"
+            >
               We've got more browsers in the pipeline. Please do let us know if
               you've got a favourite you'd like us to prioritize.
             </p>
           </div>
-          <div class="grid gap-8">
+          <div
+            class="grid gap-8 lg:grid-cols-3 lg:justify-center lg:max-w-[85%] lg:gap-0 lg:mx-auto"
+          >
             <div
               class="card shadow-md rounded-2xl grid gap-4 p-4 justify-items-center max-w-[80%] justify-self-center"
             >
@@ -145,7 +168,7 @@
               </button>
             </div>
             <div
-              class="card shadow-md rounded-2xl grid gap-4 p-4 justify-items-center max-w-[80%] justify-self-center"
+              class="card shadow-md rounded-2xl grid gap-4 p-4 justify-items-center max-w-[80%] justify-self-center lg:translate-y-8"
             >
               <img src="images/logo-firefox.svg" alt="" />
               <h4 class="text-xl font-bold">Add to Firefox</h4>
@@ -158,7 +181,7 @@
               </button>
             </div>
             <div
-              class="card shadow-md rounded-2xl grid gap-4 p-4 justify-items-center max-w-[80%] justify-self-center"
+              class="card shadow-md rounded-2xl grid gap-4 p-4 justify-items-center max-w-[80%] justify-self-center lg:translate-y-16"
             >
               <img src="images/logo-opera.svg" alt="" />
               <h4 class="text-xl font-bold">Add to Opera</h4>
@@ -172,7 +195,10 @@
             </div>
           </div>
         </section>
-        <section aria-label="FAQ" class="grid gap-4">
+        <section
+          aria-label="FAQ"
+          class="grid gap-4 mt-16 mb-16 lg:mt-32 lg:max-w-[50ch]"
+        >
           <h3 class="text-xl font-bold text-center">
             Frequently Asked questions
           </h3>
@@ -181,7 +207,7 @@
             like answered please feel free to email us.
           </p>
           <details
-            class="[&_svg]:open:rotate-180 [&_svg]:open:stroke-softRed [&_svg]:stroke-softBlue"
+            class="[&_svg]:open:rotate-180 [&_svg]:open:stroke-softRed [&_svg]:stroke-softBlue mt-8"
           >
             <summary
               class="pb-4 border-b-2 marker:content-[''] flex justify-between items-center"
@@ -252,8 +278,74 @@
               pellentesque non ut velit.
             </p>
           </details>
+          <button
+            class="bg-softBlue text-white py-2 px-4 mt-6 rounded-md justify-self-center"
+          >
+            More Info
+          </button>
+        </section>
+        <section
+          aria-label="Newsletter"
+          class="grid gap-4 bg-softBlue py-12 fullWidth"
+        >
+          <p
+            class="uppercase text-center text-xs text-white tracking-[0.25rem]"
+          >
+            35.000+ already joined
+          </p>
+          <h3
+            class="text-white text-center text-2xl max-w-[20ch] justify-self-center"
+          >
+            Stay up-to-date with what we're doing
+          </h3>
+          <form class="grid justify-self-stretch gap-4 lg:grid-cols-3">
+            <input
+              type="email"
+              placeholder="Enter your email address"
+              class="block py-2 rounded-md px-4 lg:col-span-2"
+            />
+            <button
+              type="submit"
+              class="block bg-softRed text-white py-2 rounded-md"
+            >
+              Contact Us
+            </button>
+          </form>
         </section>
       </div>
     </main>
+    <footer
+      class="grid place-items-center gap-8 p-8 bg-veryDarkBlue lg:flex lg:justify-between lg:px-[7.5%]"
+    >
+      <div class="lg:flex lg:gap-8">
+        <svg width="148" height="25" xmlns="http://www.w3.org/2000/svg">
+          <g fill="none" fill-rule="evenodd">
+            <path
+              d="M37 6.299h5.227c.746 0 1.434.155 2.062.466.629.311 1.123.735 1.484 1.27s.542 1.12.542 1.754c0 .672-.165 1.254-.495 1.746-.33.491-.762.868-1.297 1.129v.15c.697.248 1.25.643 1.661 1.185.41.541.616 1.191.616 1.95 0 .735-.196 1.385-.588 1.951a3.817 3.817 0 0 1-1.587 1.307c-.665.305-1.403.457-2.212.457H37V6.299zm5.04 5.45c.548 0 .986-.152 1.316-.457.33-.305.495-.688.495-1.148 0-.448-.159-.824-.476-1.13-.318-.304-.738-.457-1.26-.457H39.52v3.192h2.52zm.28 5.619c.61 0 1.086-.159 1.428-.476.342-.317.513-.731.513-1.241 0-.51-.174-.927-.522-1.251-.349-.324-.847-.485-1.494-.485H39.52v3.453h2.8zm12.927 2.595c-1.307 0-2.492-.308-3.556-.924a6.711 6.711 0 0 1-2.511-2.53c-.61-1.07-.915-2.246-.915-3.528 0-1.281.305-2.457.915-3.528a6.711 6.711 0 0 1 2.51-2.529C52.756 6.308 53.94 6 55.248 6c1.306 0 2.492.308 3.556.924a6.711 6.711 0 0 1 2.51 2.53c.61 1.07.915 2.246.915 3.527 0 1.282-.305 2.458-.915 3.528a6.711 6.711 0 0 1-2.51 2.53c-1.064.616-2.25.924-3.556.924zm0-2.39a4.52 4.52 0 0 0 2.258-.578 4.177 4.177 0 0 0 1.615-1.624c.392-.697.588-1.494.588-2.39 0-.896-.196-1.692-.588-2.389a4.177 4.177 0 0 0-1.615-1.624 4.52 4.52 0 0 0-2.258-.579 4.47 4.47 0 0 0-2.25.579 4.195 4.195 0 0 0-1.605 1.624c-.392.697-.588 1.493-.588 2.39 0 .895.196 1.692.588 2.389a4.195 4.195 0 0 0 1.605 1.624 4.47 4.47 0 0 0 2.25.578zm15.353 2.39c-1.307 0-2.492-.308-3.556-.924a6.711 6.711 0 0 1-2.51-2.53c-.61-1.07-.915-2.246-.915-3.528 0-1.281.305-2.457.914-3.528a6.711 6.711 0 0 1 2.511-2.529C68.108 6.308 69.294 6 70.6 6c1.307 0 2.492.308 3.556.924a6.711 6.711 0 0 1 2.51 2.53c.61 1.07.915 2.246.915 3.527 0 1.282-.305 2.458-.914 3.528a6.711 6.711 0 0 1-2.511 2.53c-1.064.616-2.25.924-3.556.924zm0-2.39a4.52 4.52 0 0 0 2.259-.578 4.177 4.177 0 0 0 1.614-1.624c.392-.697.588-1.494.588-2.39 0-.896-.196-1.692-.588-2.389a4.177 4.177 0 0 0-1.614-1.624 4.52 4.52 0 0 0-2.259-.579 4.47 4.47 0 0 0-2.25.579 4.195 4.195 0 0 0-1.605 1.624c-.392.697-.588 1.493-.588 2.39 0 .895.196 1.692.588 2.389a4.195 4.195 0 0 0 1.606 1.624 4.47 4.47 0 0 0 2.249.578zM79.83 6.3h2.52v5.73h.15l4.89-5.73h3.043v.149L85.6 11.973l5.338 7.542v.149h-3.08l-3.994-5.693-1.512 1.773v3.92h-2.52V6.299zM93.779 6h3.248l3.546 9.39h.15L104.268 6h3.267v13.365h-2.501v-6.589l.15-2.221h-.15l-3.398 8.81h-1.96l-3.416-8.81h-.149l.15 2.221v6.59h-2.483V6zm20.8 0h2.894l5.021 13.365h-2.781l-1.12-3.192h-5.115l-1.12 3.192h-2.781L114.579 6zm3.193 7.859l-1.176-3.36-.486-1.606h-.149l-.485 1.606-1.195 3.36h3.49zM124.553 6h4.872c.871 0 1.646.18 2.324.541.678.361 1.204.862 1.577 1.503.374.64.56 1.366.56 2.175 0 .858-.27 1.62-.812 2.286a4.617 4.617 0 0 1-2.044 1.447l-.018.13 3.584 5.134v.15h-2.894l-3.453-5.022h-1.176v5.021h-2.52V6zm4.853 6.03c.573 0 1.04-.175 1.4-.523.361-.349.542-.79.542-1.326 0-.51-.172-.945-.514-1.306-.342-.361-.806-.542-1.39-.542h-2.371v3.696h2.333zm7.23-6.03h2.52v5.73h.15l4.89-5.73h3.043v.15l-4.835 5.525 5.34 7.541v.15h-3.08l-3.996-5.694-1.512 1.773v3.92h-2.52V6z"
+              fill="white"
+              fill-rule="nonzero"
+            />
+            <g>
+              <circle fill="#5267DF" cx="12.5" cy="12.5" r="12.5" />
+              <path
+                d="M9 9v10l3.54-3.44L16.078 19V9a2 2 0 0 0-2-2H11a2 2 0 0 0-2 2z"
+                fill="#FFF"
+              />
+            </g>
+          </g>
+        </svg>
+        <div
+          class="flex flex-col gap-6 text-grayshBlue items-center lg:flex-row max-lg:mt-8"
+        >
+          <a href="#features">FEATURES</a>
+          <a href="#">PRICING</a>
+          <a href="#">CONTACT</a>
+        </div>
+      </div>
+      <div class="flex gap-8">
+        <img src="images/icon-facebook.svg" alt="" />
+        <img src="images/icon-twitter.svg" alt="" />
+      </div>
+    </footer>
   </body>
 </html>
